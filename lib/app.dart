@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:prack_5/shared/widgets/empty_state.dart';
+import 'package:prack_5/features/notes/state/notes_container.dart';
 import 'shared/theme/app_theme.dart';
 
 
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Notes App',
       theme: AppTheme.lightTheme,
-      home: const EmptyState(message: "message"),
+      home: const NotesContainer(),
     );
   }
 }
