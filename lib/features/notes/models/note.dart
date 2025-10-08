@@ -1,4 +1,7 @@
+import 'package:uuid/uuid.dart';
+
 class Note {
+  String id;
   String title;
   String content;
   String category;
@@ -9,5 +12,7 @@ class Note {
     required this.content,
     this.category = 'Без категории',
     DateTime? creationDate,
-  }) : creationDate = creationDate ?? DateTime.now();
+    String? id,
+  })  : id = id ?? const Uuid().v4(),
+        creationDate = creationDate ?? DateTime.now();
 }
